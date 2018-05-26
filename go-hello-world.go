@@ -25,6 +25,12 @@ func main() {
 			"message": "hi",
 		})
 	})
+	
+	router.GET("/loaderio-a7847355da506f3e116029f3839e6e41", func(c *gin.Context) {
+		c.HTML(http.StatusOK, "index.tmpl", gin.H{
+			"title": "loaderio-a7847355da506f3e116029f3839e6e41",
+		})
+	})
 
 	port := os.Getenv("PORT")
 	if port == "" {
